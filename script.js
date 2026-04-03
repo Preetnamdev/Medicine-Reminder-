@@ -7,7 +7,10 @@ function display() {
   list.innerHTML = "";
   medicines.forEach((med, index) => {
     let li = document.createElement("li");
-    li.innerHTML = ${med.name} (${med.time}) <button onclick="deleteMed(${index})">❌</button>;
+    li.innerHTML = `
+      ${med.name} (${med.time})
+      <button onclick="deleteMed(${index})">❌</button>
+    `;
     list.appendChild(li);
   });
 }
