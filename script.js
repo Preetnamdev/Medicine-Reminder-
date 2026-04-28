@@ -1,14 +1,13 @@
 let form = document.getElementById("form");
 let list = document.getElementById("list");
 
-// 🔐 Get Logged-in User
+
 let user = localStorage.getItem("loggedInUser");
 
 if (!user) {
   window.location.href = "login.html";
 }
 
-// 👇 User-wise medicines (IMPORTANT CHANGE)
 let medicines = JSON.parse(localStorage.getItem(user + "_medicines")) || [];
 
 // 🔔 Notification Permission
